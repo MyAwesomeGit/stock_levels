@@ -1,0 +1,1 @@
+import loggingimport uvicornfrom fastapi import FastAPIapp = FastAPI()@app.on_event("startup")def startup():    logging.info("App started.")if __name__ == '__main__':    uvicorn.run("main:app")
